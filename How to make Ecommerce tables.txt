@@ -1,0 +1,71 @@
+Creating a database schema for an online shopping website involves designing tables to store information about products, users, orders, and more. Below is a structured format for creating essential tables for an e-commerce website:
+
+1. **Products Table**:
+   - `product_id` (Primary Key)
+   - `product_name`
+   - `category`
+   - `price`
+   - `quantity`
+   - `description`
+   - `image_url`
+   - `created_at`
+   - `updated_at`
+
+2. **Users Table**:
+   - `user_id` (Primary Key)
+   - `name`
+   - `email` (Unique)
+   - `password`
+   - `role` (e.g., customer, admin)
+   - `created_at`
+   - `updated_at`
+
+3. **Orders Table**:
+   - `order_id` (Primary Key)
+   - `user_id` (Foreign Key referencing Users Table)
+   - `order_date`
+   - `total_amount`
+   - `status` (e.g., pending, shipped, delivered)
+   - `payment_method`
+   - `shipping_address`
+   - `billing_address`
+   - `shipping_method`
+   - `tracking_number`
+   - `notes`
+   - `coupon_code`
+   - `created_at`
+   - `updated_at`
+
+4. **Order Details Table** (to store individual items within an order):
+   - `order_detail_id` (Primary Key)
+   - `order_id` (Foreign Key referencing Orders Table)
+   - `product_id` (Foreign Key referencing Products Table)
+   - `quantity`
+   - `unit_price`
+
+5. **Reviews Table**:
+   - `review_id` (Primary Key)
+   - `product_id` (Foreign Key referencing Products Table)
+   - `user_id` (Foreign Key referencing Users Table)
+   - `rating`
+   - `comment`
+   - `created_at`
+
+6. **Cart Table** (for storing temporary cart items before checkout):
+   - `cart_id` (Primary Key)
+   - `user_id` (Foreign Key referencing Users Table)
+   - `product_id` (Foreign Key referencing Products Table)
+   - `quantity`
+   - `created_at`
+   - `updated_at`
+
+7. **Coupons Table** (for managing discount coupons):
+   - `coupon_id` (Primary Key)
+   - `code` (Unique)
+   - `discount`
+   - `valid_from`
+   - `valid_until`
+   - `created_at`
+   - `updated_at`
+
+These are the fundamental tables required for an e-commerce website. You can customize and extend this schema based on additional features such as shipping details, wishlists, promotions, etc. Additionally, don't forget to establish proper relationships between tables using foreign keys for data integrity and consistency.
