@@ -41,7 +41,7 @@
   
     <servlet>
   		<servlet-name>AddProductServlet</servlet-name>
-  		<servlet-class>Admin.AddProductServlet</servlet-class>
+  		<servlet-class>ProductAdd.AddProductServlet</servlet-class>
   </servlet>
   <servlet-mapping>
   		<servlet-name>AddProductServlet</servlet-name>
@@ -84,6 +84,17 @@
   <servlet-mapping>
   		<servlet-name>Profile</servlet-name>
   		<url-pattern>/Profile</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+   <servlet>
+  		<servlet-name>CheckOrder</servlet-name>
+  		<servlet-class>OrderPage.CheckOrder</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  		<servlet-name>CheckOrder</servlet-name>
+  		<url-pattern>/CheckOrder</url-pattern>
   </servlet-mapping>
   
   

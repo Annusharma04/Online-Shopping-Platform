@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
             	session.setAttribute("email",email);
                 response.sendRedirect("AfterLogin.jsp");                
             } else if ("admin".equals(role)) {
-                response.sendRedirect("admin_dashboard.jsp");
+                response.sendRedirect("Main.jsp");
             } else {
                 // Invalid role, handle appropriately (e.g., show an error message)
                 response.sendRedirect("error.jsp");
